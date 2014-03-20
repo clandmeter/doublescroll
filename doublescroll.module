@@ -1,0 +1,23 @@
+<?php
+
+/*
+ * DoubleScroll version number
+ */
+define(DS_VERSION, '0.3');
+
+/**
+ * Implements hook_library().
+ */
+function doublescroll_library() {
+    $libraries['doublescroll'] = array(
+        'title' => 'DoubleScroll',
+        'website' => 'https://github.com/sniku/jQuery-doubleScroll',
+        'version' => DS_VERSION,
+        'js' => array(
+            drupal_get_path('module', 'doublescroll') . '/js/jquery.doubleScroll.js' => array()
+        )
+    );
+    return $libraries;
+}
+
+
