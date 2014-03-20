@@ -3,7 +3,7 @@
 /*
  * DoubleScroll version number
  */
-define(DS_VERSION, '0.3');
+define('DS_VERSION', '0.3');
 
 /**
  * Implements hook_library().
