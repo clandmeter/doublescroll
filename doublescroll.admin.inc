@@ -11,6 +11,8 @@ function doublescroll_settings_form() {
         '#default_value' => variable_get('doublescroll_selector', '.doublescroll'),
     );
     /*
+     * We should implement pages to include/exclude similar like the
+     * block configuration.
     $form['doublescroll_pages'] = array(
         '#type' => 'textarea',
         '#title' => 'Applied pages',
