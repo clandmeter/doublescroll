@@ -11,7 +11,7 @@ define('DS_VERSION', '0.3');
 function doublescroll_library() {
     $libraries['doublescroll'] = array(
         'title' => 'DoubleScroll',
-        'website' => 'https://github.com/sniku/jQuery-doubleScroll',
+        'website' => 'https://github.com/avianey/jqDoubleScroll',
         'version' => DS_VERSION,
         'js' => array(
             drupal_get_path('module', 'doublescroll') . '/js/jquery.doubleScroll.js' => array()
