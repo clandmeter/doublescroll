@@ -20,4 +20,40 @@ function doublescroll_library() {
     return $libraries;
 }
 
+/**
+ * Implements hook_menu().
+ */
+function doublescroll_menu() {
+    $items['admin/config/user-interface/doublescroll'] = array(
+        'title' => 'DoubleScroll',
+        'description' => 'Adds an additional scroll on top of very wide table.',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('doublescroll_settings_form'),
+        'access arguments' => array('administer doublescroll'),
+        'type' => MENU_NORMAL_ITEM,
+        'file' => 'doublescroll.admin.inc',
+    );
 
+    return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function doublescroll_permission() {
+    return array(
+        'administer doublescroll' => array(
+            'title' => t('Administer DoubleScroll'),
+            'description' => t('Administer DoubleScroll settings.'),
+        ),
+    );
+}
+
+/**
+ * Implements hook_init().
+ */
+function doublescroll_init() {
+    $selector = variable_get('doublescroll_selector', '.doublescroll');
+    $js = "$(document).ready(function(){\$('" . $selector . "').doubleScroll();});";
+    drupal_add_js($js, 'inline');
+}
