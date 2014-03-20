@@ -18,5 +18,5 @@ function doublescroll_settings_form() {
         '#default_value' => variable_get('doublescroll_pages', ''),
     );
      */
-    system_settings_form($form);
+    return system_settings_form($form);
 }
