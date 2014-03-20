@@ -1,10 +1,8 @@
 doublescroll
 ============
 
-Drupal Jquery DoubleScroll
+Drupal Jquery jqDoubleScroll
 
 More information about DoubleScroll:
 
-https://github.com/sniku/jQuery-doubleScroll
-
-http://suwala.eu/blog/2012/02/01/horizontal-scrollbar-top-and-bottom-element/
+https://github.com/avianey/jqDoubleScroll

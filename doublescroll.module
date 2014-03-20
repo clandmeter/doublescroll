@@ -54,6 +54,7 @@ function doublescroll_permission() {
  */
 function doublescroll_init() {
     $selector = variable_get('doublescroll_selector', '.doublescroll');
-    $js = "$(document).ready(function(){\$('" . $selector . "').doubleScroll();});";
+    $js = "(function ($) { $(document).ready(function() { $('" . $selector . "').doubleScroll(); }); })(jQuery);";
+    drupal_add_library('doublescroll', 'doublescroll');
     drupal_add_js($js, 'inline');
 }
