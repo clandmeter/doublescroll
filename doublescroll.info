@@ -2,3 +2,5 @@ name = Jquery DoubleScroll
 description = Jquery plugin to display additional scroll on top of very wide table.
 configure = admin/config/user-interface/doublescroll
 core = 7.x
+files[] = doublescroll.module
+files[] = doublescroll.admin.inc
